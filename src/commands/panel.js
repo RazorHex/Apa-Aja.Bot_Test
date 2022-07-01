@@ -46,6 +46,7 @@ module.exports = {
         const fancy = new MessageEmbed()
                 .setTitle(interaction.guild.name)
                 .setDescription('Test only')
+                .setThumbnail(interaction.guild.iconURL())
 
         await interaction.reply({
             embeds: [fancy],
