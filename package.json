@@ -1,0 +1,21 @@
+{
+  "name": "nodejs_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm outdated && nodemon index.js",
+    "up": "ncu -i && npm install"
+  },
+  "author": "Ahda Akmalul Ilmi",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^0.5.0",
+    "ascii-table": "^0.0.9",
+    "discord-api-types": "^0.36.0",
+    "discord.js": "^13.8.1",
+    "dotenv": "^16.0.1",
+    "mongoose": "^6.4.1"
+  }
+}
