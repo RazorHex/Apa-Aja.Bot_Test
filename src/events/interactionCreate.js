@@ -42,8 +42,7 @@ module.exports = {
 
                 if(status) {
                     await interaction.update({
-                        content: `Removing ${role}...`,
-                        ephemeral: true
+                        content: `Please check for bot online status`
                     })
 
                     member.roles.remove(role).catch(console.error)
@@ -54,8 +53,7 @@ module.exports = {
                     })
                 } else {
                     await interaction.update({
-                        content: `Hi ${member.user.username}`,
-                        ephemeral: true
+                        content: `Please check for bot online status`
                     })
     
                     member.roles.add(role).catch(console.error)
