@@ -13,7 +13,7 @@ module.exports = {
 
     async execute (interaction) {
         //command respond
-        if(interaction.isCommand()) {
+        if(interaction.isChatInputCommand()) {
             const command = client.commands.get(interaction.commandName);
             if(!command) return;
 

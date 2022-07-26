@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageSelectMenu, MessageActionRow, MessageEmbed, Interaction } = require('discord.js')
+const { SelectMenuBuilder, ActionRowBuilder, EmbedBuilder, Interaction } = require('discord.js')
 const model = require('../../db')
 
 module.exports = {
@@ -35,15 +35,15 @@ module.exports = {
             server.roles.forEach(role => options.push({label:role.name, description:role.description, value: role.name}))
         }
 
-        const row = new MessageActionRow()
+        const row = new ActionRowBuilder()
             .addComponents(
-                new MessageSelectMenu()
+                new SelectMenuBuilder()
                     .setCustomId('panel')
                     .setPlaceholder('Select Role')
                     .addOptions(options)
             )
         
-        const fancy = new MessageEmbed()
+        const fancy = new EmbedBuilder()
                 .setTitle(interaction.guild.name)
                 .setDescription('Test only')
                 .setThumbnail(interaction.guild.iconURL())
